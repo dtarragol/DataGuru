@@ -1,0 +1,10 @@
+C:\Users\ciner\OneDrive\Escritorio\ProyectoNET\ProyectoGuruData\ProyectoGuruData\bin\Debug\ProyectoGuruData.exe.config
+C:\Users\ciner\OneDrive\Escritorio\ProyectoNET\ProyectoGuruData\ProyectoGuruData\bin\Debug\ProyectoGuruData.exe
+C:\Users\ciner\OneDrive\Escritorio\ProyectoNET\ProyectoGuruData\ProyectoGuruData\bin\Debug\ProyectoGuruData.pdb
+C:\Users\ciner\OneDrive\Escritorio\ProyectoNET\ProyectoGuruData\ProyectoGuruData\obj\Debug\ProyectoGuruData.csproj.AssemblyReference.cache
+C:\Users\ciner\OneDrive\Escritorio\ProyectoNET\ProyectoGuruData\ProyectoGuruData\obj\Debug\ProyectoGuruData.csproj.SuggestedBindingRedirects.cache
+C:\Users\ciner\OneDrive\Escritorio\ProyectoNET\ProyectoGuruData\ProyectoGuruData\obj\Debug\ProyectoGuruData.Properties.Resources.resources
+C:\Users\ciner\OneDrive\Escritorio\ProyectoNET\ProyectoGuruData\ProyectoGuruData\obj\Debug\ProyectoGuruData.csproj.GenerateResource.cache
+C:\Users\ciner\OneDrive\Escritorio\ProyectoNET\ProyectoGuruData\ProyectoGuruData\obj\Debug\ProyectoGuruData.csproj.CoreCompileInputs.cache
+C:\Users\ciner\OneDrive\Escritorio\ProyectoNET\ProyectoGuruData\ProyectoGuruData\obj\Debug\ProyectoGuruData.exe
+C:\Users\ciner\OneDrive\Escritorio\ProyectoNET\ProyectoGuruData\ProyectoGuruData\obj\Debug\ProyectoGuruData.pdb
