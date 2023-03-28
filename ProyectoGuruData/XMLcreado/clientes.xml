@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Clientes>
+  <Cliente NIF="" Nombre="Maria" Teléfono="817268819" Mail="maria@gmail.com" Contraseña="maria7162" />
+  <Cliente NIF="a" Nombre="lala" Teléfono="8181991" Mail="mail" Contraseña="aa" />
+  <Cliente NIF="ka" Nombre="ka" Teléfono="11" Mail="ka" Contraseña="ka" />
+  <Cliente NIF="X23981788" Nombre="Josép" Teléfono="912716882" Mail="josep@gmail.com" Contraseña="AwssP" />
+</Clientes>

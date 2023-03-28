@@ -31,7 +31,12 @@
             this.lblNif = new System.Windows.Forms.Label();
             this.txtNif = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.Nif = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
@@ -40,7 +45,8 @@
             this.txtMail = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnXML = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNif
@@ -61,25 +67,78 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(221, 489);
+            this.btnSave.Location = new System.Drawing.Point(61, 530);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(203, 78);
             this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Añadir";
+            this.btnSave.Text = "Añadir Cliente";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // dataGridView1
+            // dgvClientes
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(508, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(702, 592);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nif,
+            this.Nombre,
+            this.Teléfono,
+            this.Mail,
+            this.Contraseña});
+            this.dgvClientes.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvClientes.Location = new System.Drawing.Point(582, 72);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            this.dgvClientes.RowHeadersWidth = 82;
+            this.dgvClientes.RowTemplate.Height = 33;
+            this.dgvClientes.Size = new System.Drawing.Size(1393, 592);
+            this.dgvClientes.TabIndex = 3;
+            // 
+            // Nif
+            // 
+            this.Nif.DataPropertyName = "nif";
+            this.Nif.HeaderText = "Nif";
+            this.Nif.MinimumWidth = 10;
+            this.Nif.Name = "Nif";
+            this.Nif.ReadOnly = true;
+            this.Nif.Width = 200;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 10;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 200;
+            // 
+            // Teléfono
+            // 
+            this.Teléfono.DataPropertyName = "telefono";
+            this.Teléfono.HeaderText = "Teléfono";
+            this.Teléfono.MinimumWidth = 10;
+            this.Teléfono.Name = "Teléfono";
+            this.Teléfono.ReadOnly = true;
+            this.Teléfono.Width = 200;
+            // 
+            // Mail
+            // 
+            this.Mail.DataPropertyName = "mail";
+            this.Mail.HeaderText = "Mail";
+            this.Mail.MinimumWidth = 10;
+            this.Mail.Name = "Mail";
+            this.Mail.ReadOnly = true;
+            this.Mail.Width = 150;
+            // 
+            // Contraseña
+            // 
+            this.Contraseña.DataPropertyName = "password";
+            this.Contraseña.HeaderText = "Contraseña";
+            this.Contraseña.MinimumWidth = 10;
+            this.Contraseña.Name = "Contraseña";
+            this.Contraseña.ReadOnly = true;
+            this.Contraseña.Width = 150;
             // 
             // lblNombre
             // 
@@ -145,13 +204,24 @@
             this.txtPassword.Size = new System.Drawing.Size(253, 31);
             this.txtPassword.TabIndex = 1;
             // 
+            // btnXML
+            // 
+            this.btnXML.Location = new System.Drawing.Point(344, 530);
+            this.btnXML.Name = "btnXML";
+            this.btnXML.Size = new System.Drawing.Size(199, 77);
+            this.btnXML.TabIndex = 5;
+            this.btnXML.Text = "Generar XML";
+            this.btnXML.UseVisualStyleBackColor = true;
+            this.btnXML.Click += new System.EventHandler(this.btnXML_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1233, 640);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1987, 742);
+            this.Controls.Add(this.btnXML);
+            this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
@@ -166,7 +236,7 @@
             this.Name = "Form1";
             this.Text = "Añadir Cliente";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,7 +247,7 @@
         private System.Windows.Forms.Label lblNif;
         private System.Windows.Forms.TextBox txtNif;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblTelefono;
@@ -186,6 +256,12 @@
         private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nif;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contraseña;
+        private System.Windows.Forms.Button btnXML;
     }
 }
 
