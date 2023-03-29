@@ -99,7 +99,7 @@ namespace ProyectoGuruData
                                                 new XAttribute("Contraseña", x.Password)
                                            )));
            
-            xml.Save(@"C:\Users\kater\DATAguru_NET\DataGuru\ProyectoGuruData\XMLcreado\\clientes.xml");
+            xml.Save(@"C:\Users\ciner\OneDrive\Escritorio\NET\DataGuru\ProyectoGuruData\XMLcreado\\clientes.xml");
             MessageBox.Show("El XML se ha generado correctamente");
 
 
