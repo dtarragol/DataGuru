@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
@@ -15,21 +15,10 @@ namespace ProyectoGuruData.ModeloBBDD
         }
 
         public string IdActividad { get; set; }
-        public enum TipoActividad
-        {
-            Zumba, Pilates, BodyPump
-        }
-        public TipoActividad tipoActividad { get; set; }
-
+        public string TipoActividad { get; set; }
         public TimeSpan? Hora { get; set; }
-        public enum DiaSemana
-        {
-            Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo
-        }
-        public DiaSemana diaSemana { get; set; }
-
+        public string DiaSemana { get; set; }
         public int? Plazas { get; set; }
-        
 
         public virtual ICollection<Reservas> Reservas { get; set; }
     }
