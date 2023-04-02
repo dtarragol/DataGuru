@@ -15,20 +15,13 @@ namespace ProyectoGuruData.ModeloBBDD
         }
 
         public string IdActividad { get; set; }
-        public enum DiaSemana
-        {
-            Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo
-        }
-        public DiaSemana diaSemana { get; set; }
-        //public string DiaSemana { get; set; }
-        public enum TipoActividad
-        {
-            Zumba, Pilates, BodyPump
-        }
-        public TipoActividad tipoActividad { get; set; }
-        //public string TipoActividad { get; set; }
-        public TimeSpan? Hora { get; set; }
         
+        public string diaSemana { get; set; }
+        
+        public string tipoActividad { get; set; }
+        //public string Hora { get; set; }
+        public TimeSpan? Hora { get; set; }
+
         public int? Plazas { get; set; }
 
         public virtual ICollection<Reservas> Reservas { get; set; }
