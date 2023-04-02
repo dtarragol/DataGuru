@@ -44,7 +44,7 @@ namespace ProyectoGuruData.ModeloBBDD
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.Property(e => e.DiaSemana)
+                entity.Property(e => e.diaSemana)
                     .HasColumnName("diaSemana")
                     .HasMaxLength(20)
                     .IsUnicode(false);
@@ -53,7 +53,7 @@ namespace ProyectoGuruData.ModeloBBDD
 
                 entity.Property(e => e.Plazas).HasColumnName("plazas");
 
-                entity.Property(e => e.TipoActividad)
+                entity.Property(e => e.tipoActividad)
                     .HasColumnName("tipoActividad")
                     .HasMaxLength(50)
                     .IsUnicode(false);
