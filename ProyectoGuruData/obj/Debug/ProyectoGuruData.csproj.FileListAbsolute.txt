@@ -392,3 +392,4 @@ C:\Users\ciner\OneDrive\Escritorio\ProbandoEnumsNET\DataGuru\ProyectoGuruData\bi
 C:\Users\ciner\OneDrive\Escritorio\ProbandoEnumsNET\DataGuru\ProyectoGuruData\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\ciner\OneDrive\Escritorio\ProbandoEnumsNET\DataGuru\ProyectoGuruData\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\ciner\OneDrive\Escritorio\ProbandoEnumsNET\DataGuru\ProyectoGuruData\obj\Debug\ProyectoGuruData.csproj.CopyComplete
+C:\Users\ciner\OneDrive\Escritorio\ProbandoEnumsNET\DataGuru\ProyectoGuruData\obj\Debug\ProyectoGuruData.FormActividades.resources
