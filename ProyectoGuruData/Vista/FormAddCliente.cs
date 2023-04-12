@@ -12,10 +12,10 @@ using System.Xml.Linq;
 
 namespace ProyectoGuruData
 {
-    public partial class Form1 : Form
+    public partial class FormAddCliente : Form
     {
         Clientes cliente = new Clientes();  // instanciamos un Cliente 
-        public Form1()
+        public FormAddCliente()
         {            
 
             InitializeComponent();

@@ -1,6 +1,6 @@
 ﻿namespace ProyectoGuruData
 {
-    partial class Form1
+    partial class FormAddCliente
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -214,11 +214,11 @@
             this.btnXML.UseVisualStyleBackColor = true;
             this.btnXML.Click += new System.EventHandler(this.btnXML_Click);
             // 
-            // Form1
+            // FormAddCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(1987, 742);
             this.Controls.Add(this.btnXML);
             this.Controls.Add(this.dgvClientes);
@@ -233,7 +233,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtNif);
             this.Controls.Add(this.lblNif);
-            this.Name = "Form1";
+            this.Name = "FormAddCliente";
             this.Text = "Añadir Cliente";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
