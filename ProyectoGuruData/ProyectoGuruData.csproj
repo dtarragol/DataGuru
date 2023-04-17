@@ -169,6 +169,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModeloBBDD\ListaEspera.cs" />
+    <Compile Include="ModeloBBDD\ListaReservas.cs" />
     <Compile Include="Vista\FormVistaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
