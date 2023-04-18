@@ -8,8 +8,6 @@ namespace ProyectoGuruData.ModeloBBDD
 {
     internal class ListaEspera : Reservas
     {
-         public class ListaEspera : Reservas
-    {
         private List<Reservas> reservasEnEspera;
 
         public ListaEspera() : base()
@@ -38,7 +36,5 @@ namespace ProyectoGuruData.ModeloBBDD
                 Console.WriteLine("No hay reservas en espera para el Cliente {0}", idCliente);
             }
         }
-
-    }
     }
 }

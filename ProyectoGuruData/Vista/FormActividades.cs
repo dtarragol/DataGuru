@@ -30,6 +30,10 @@ namespace ProyectoGuruData
             comboBoxActividades.Items.AddRange(opciones.ToArray());
             List<string> opciones2 = new List<string> { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
             comboBoxDia.Items.AddRange(opciones2.ToArray());
+            List<string> ListaHoras = new List<string> { "08", "09", "10", "11", "12", "13", "16", "17", "18", "19", "20", "21", "22"};
+            List<string> ListaMinutos = new List<string> { "00", "15", "30", "45"};
+            comboBoxHoras.Items.AddRange(ListaHoras.ToArray());
+            comboBoxMinutos.Items.AddRange(ListaMinutos.ToArray());
         }
 
         
@@ -46,7 +50,7 @@ namespace ProyectoGuruData
             DATAguruContext db = new DATAguruContext(); // para hacer la conexión con BBDD
 
             
-            if ( txtPlazas.Text != "" && txtHora.Text != "")
+            if ( txtPlazas.Text != "")
             {
                 string tipoActividad = comboBoxActividades.SelectedItem.ToString();
                 string Dia = comboBoxDia.SelectedItem.ToString();
@@ -63,9 +67,18 @@ namespace ProyectoGuruData
                     actividad.IdActividad = txtIDActividad.Text.Trim();
                     actividad.Plazas = int.Parse(txtPlazas.Text.Trim());
 
-                    string tiempoStr = txtHora.Text.Trim();
+                    //string tiempoStr = txtHora.Text.Trim();
+
+                    string HoraStr = comboBoxHoras.SelectedItem.ToString();
+
+                    string MinutoStr = comboBoxMinutos.SelectedItem.ToString();
+                    
+
+
+                    string horaCompleta = HoraStr + ":" + MinutoStr;
+
                     // Convertir la cadena a un objeto TimeSpan utilizando el método ParseExact
-                    TimeSpan hora = TimeSpan.ParseExact(tiempoStr, "hh\\:mm", null);
+                    TimeSpan hora = TimeSpan.ParseExact(horaCompleta, "hh\\:mm", null);
 
                     actividad.Hora = hora;
                     db.Actividades.Add(actividad);
@@ -85,6 +98,16 @@ namespace ProyectoGuruData
 
 
 
+
+        }
+
+        private void FormActividades_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
 
         }
     }
