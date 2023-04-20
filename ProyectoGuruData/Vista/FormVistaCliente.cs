@@ -16,5 +16,11 @@ namespace ProyectoGuruData.Vista
         {
             InitializeComponent();
         }
+
+        private void btnReservarActv_Click(object sender, EventArgs e)
+        {
+            ReservasCliente reservasCliente = new ReservasCliente();
+            reservasCliente.Show();
+        }
     }
 }

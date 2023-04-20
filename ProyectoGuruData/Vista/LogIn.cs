@@ -13,9 +13,13 @@ namespace ProyectoGuruData.Vista
 {
     public partial class LogIn : Form
     {
+        public static LogIn instance;  // para acceder a sus datos desde otors forms
+        public TextBox txtPasswordCliente;
         public LogIn()
         {
             InitializeComponent();
+            instance = this;      // para acceder a sus datos desde otors forms
+            txtPasswordCliente = txtPassword;
         }
 
         //BOTON LOGIN DEL ADMINISTRADOR
@@ -50,6 +54,11 @@ namespace ProyectoGuruData.Vista
                 MessageBox.Show("Has introducido datos incorrrectos");
             }
 
+
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
 
         }
     }

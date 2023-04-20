@@ -171,6 +171,12 @@
   <ItemGroup>
     <Compile Include="ModeloBBDD\ListaEspera.cs" />
     <Compile Include="ModeloBBDD\ListaReservas.cs" />
+    <Compile Include="Vista\ReservasCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ReservasCliente.Designer.cs">
+      <DependentUpon>ReservasCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FormVistaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ReservasCliente.resx">
+      <DependentUpon>ReservasCliente.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProyectoGuruData.ModeloBBDD.Actividades+TipoActividad.datasource" />

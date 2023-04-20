@@ -30,13 +30,16 @@
         {
             this.btnGestionClientes = new System.Windows.Forms.Button();
             this.btnGestionActividades = new System.Windows.Forms.Button();
+            this.btnHacerReserva = new System.Windows.Forms.Button();
+            this.btnMostrarReservasTodas = new System.Windows.Forms.Button();
+            this.btnMostrarReservasEspera = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGestionClientes
             // 
-            this.btnGestionClientes.Location = new System.Drawing.Point(506, 41);
+            this.btnGestionClientes.Location = new System.Drawing.Point(283, 179);
             this.btnGestionClientes.Name = "btnGestionClientes";
-            this.btnGestionClientes.Size = new System.Drawing.Size(347, 77);
+            this.btnGestionClientes.Size = new System.Drawing.Size(347, 74);
             this.btnGestionClientes.TabIndex = 0;
             this.btnGestionClientes.Text = "Añadir y Mostrar Clientes";
             this.btnGestionClientes.UseVisualStyleBackColor = true;
@@ -44,13 +47,40 @@
             // 
             // btnGestionActividades
             // 
-            this.btnGestionActividades.Location = new System.Drawing.Point(506, 147);
+            this.btnGestionActividades.Location = new System.Drawing.Point(715, 179);
             this.btnGestionActividades.Name = "btnGestionActividades";
-            this.btnGestionActividades.Size = new System.Drawing.Size(347, 93);
+            this.btnGestionActividades.Size = new System.Drawing.Size(347, 79);
             this.btnGestionActividades.TabIndex = 1;
             this.btnGestionActividades.Text = "Añadir y Mostrar Actividades";
             this.btnGestionActividades.UseVisualStyleBackColor = true;
             this.btnGestionActividades.Click += new System.EventHandler(this.btnGestionActividades_Click);
+            // 
+            // btnHacerReserva
+            // 
+            this.btnHacerReserva.Location = new System.Drawing.Point(283, 288);
+            this.btnHacerReserva.Name = "btnHacerReserva";
+            this.btnHacerReserva.Size = new System.Drawing.Size(347, 78);
+            this.btnHacerReserva.TabIndex = 2;
+            this.btnHacerReserva.Text = "Hacer Reserva para un Cliente";
+            this.btnHacerReserva.UseVisualStyleBackColor = true;
+            // 
+            // btnMostrarReservasTodas
+            // 
+            this.btnMostrarReservasTodas.Location = new System.Drawing.Point(715, 289);
+            this.btnMostrarReservasTodas.Name = "btnMostrarReservasTodas";
+            this.btnMostrarReservasTodas.Size = new System.Drawing.Size(347, 76);
+            this.btnMostrarReservasTodas.TabIndex = 3;
+            this.btnMostrarReservasTodas.Text = "Mostrar Todas las Reservas";
+            this.btnMostrarReservasTodas.UseVisualStyleBackColor = true;
+            // 
+            // btnMostrarReservasEspera
+            // 
+            this.btnMostrarReservasEspera.Location = new System.Drawing.Point(504, 400);
+            this.btnMostrarReservasEspera.Name = "btnMostrarReservasEspera";
+            this.btnMostrarReservasEspera.Size = new System.Drawing.Size(334, 76);
+            this.btnMostrarReservasEspera.TabIndex = 4;
+            this.btnMostrarReservasEspera.Text = "Mostrar Reservas en el Estado Espera";
+            this.btnMostrarReservasEspera.UseVisualStyleBackColor = true;
             // 
             // FormControlAdmin
             // 
@@ -58,6 +88,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(1402, 758);
+            this.Controls.Add(this.btnMostrarReservasEspera);
+            this.Controls.Add(this.btnMostrarReservasTodas);
+            this.Controls.Add(this.btnHacerReserva);
             this.Controls.Add(this.btnGestionActividades);
             this.Controls.Add(this.btnGestionClientes);
             this.Name = "FormControlAdmin";
@@ -70,5 +103,8 @@
 
         private System.Windows.Forms.Button btnGestionClientes;
         private System.Windows.Forms.Button btnGestionActividades;
+        private System.Windows.Forms.Button btnHacerReserva;
+        private System.Windows.Forms.Button btnMostrarReservasTodas;
+        private System.Windows.Forms.Button btnMostrarReservasEspera;
     }
 }

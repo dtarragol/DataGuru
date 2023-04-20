@@ -134,6 +134,7 @@
             this.Controls.Add(this.UserName);
             this.Name = "LogIn";
             this.Text = "FormLogIn";
+            this.Load += new System.EventHandler(this.LogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
