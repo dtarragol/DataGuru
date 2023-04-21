@@ -694,3 +694,4 @@ C:\Users\kater\OneDrive\Documentos\RESERVA_Kateryna\DataGuru\ProyectoGuruData\ob
 C:\Users\kater\OneDrive\Documentos\RESERVA_Kateryna\DataGuru\ProyectoGuruData\obj\Debug\ProyectoGuruData.exe
 C:\Users\kater\OneDrive\Documentos\RESERVA_Kateryna\DataGuru\ProyectoGuruData\obj\Debug\ProyectoGuruData.pdb
 C:\Users\kater\OneDrive\Documentos\RESERVA_Kateryna\DataGuru\ProyectoGuruData\obj\Debug\ProyectoGuruData.Vista.ReservasCliente.resources
+C:\Users\kater\OneDrive\Documentos\RESERVA_Kateryna\DataGuru\ProyectoGuruData\obj\Debug\ProyectoGuruData.Vista.ReservasXcliente.resources

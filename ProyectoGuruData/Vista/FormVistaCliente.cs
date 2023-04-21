@@ -22,5 +22,11 @@ namespace ProyectoGuruData.Vista
             ReservasCliente reservasCliente = new ReservasCliente();
             reservasCliente.Show();
         }
+
+        private void btnConsultarResrv_Click(object sender, EventArgs e)
+        {
+            ReservasXcliente reservasXcliente = new ReservasXcliente();
+            reservasXcliente.Show();
+        }
     }
 }

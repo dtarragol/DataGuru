@@ -50,6 +50,7 @@
             this.btnConsultarResrv.TabIndex = 2;
             this.btnConsultarResrv.Text = "Consultar Mis Reservas";
             this.btnConsultarResrv.UseVisualStyleBackColor = true;
+            this.btnConsultarResrv.Click += new System.EventHandler(this.btnConsultarResrv_Click);
             // 
             // FormVistaCliente
             // 

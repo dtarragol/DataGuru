@@ -171,6 +171,12 @@
   <ItemGroup>
     <Compile Include="ModeloBBDD\ListaEspera.cs" />
     <Compile Include="ModeloBBDD\ListaReservas.cs" />
+    <Compile Include="Vista\ReservasXcliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ReservasXcliente.Designer.cs">
+      <DependentUpon>ReservasXcliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ReservasCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     <Compile Include="ModeloBBDD\Reservas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vista\ReservasXcliente.resx">
+      <DependentUpon>ReservasXcliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormVistaCliente.resx">
       <DependentUpon>FormVistaCliente.cs</DependentUpon>
     </EmbeddedResource>
