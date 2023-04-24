@@ -111,9 +111,14 @@ namespace ProyectoGuruData.Vista
 
             int cantidades = db.Reservas.Where(m => m.ActividadFk == idActividad).Count();
             int cantReservasahora = db.Reservas.Where(m => m.ClienteFk == nifCliente).Count();
-            
+
+            var query = (from r in db.Reservas join a in db.Actividades on r.ActividadFk equals a.IdActividad where r.ClienteFk == nifCliente
+                               select a.diaSemana
+                               );
+            int vecesXsemana = query.Count();
+
             //int countReservasXcliente = db.Reservas.Where(m => m.ActividadFk == idActividad && m.ClienteFk == nifCliente).Count();
-                               
+
             if (cantidades >= 3)
             {
                 if(cantReservasahora < 2)
@@ -188,12 +193,12 @@ namespace ProyectoGuruData.Vista
         {
             DATAguruContext db = new DATAguruContext();
             String idActividad = gridActividades.Rows[e.RowIndex].Cells["idActividad"].FormattedValue.ToString();
-            int cantidades = db.Reservas.Where(m => m.ActividadFk == idActividad).Count();
+            int cantidades = db.Reservas.Where(m => m.ActividadFk == idActividad && m.EstadoReserva == "Aceptada").Count();
             List<Reservas> listaEspera = new List<Reservas>();
             //int idMin; 
 
 
-            if (cantidades <= 3)
+            if (cantidades < 3)
             {
                 int min = 100;
                 String convert;
