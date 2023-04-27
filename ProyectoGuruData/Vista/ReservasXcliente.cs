@@ -14,7 +14,7 @@ namespace ProyectoGuruData.Vista
     public partial class ReservasXcliente : Form
     {
         //PASSWORD CON EL QUE SE LOGEA EL CLIENTE
-        public TextBox txtPasswordCliente = LogIn.instance.txtPasswordCliente;
+        public TextBox txtPasswordCliente = FormLogin.instance.txtPasswordCliente;
 
         public ReservasXcliente()
         {
@@ -40,12 +40,7 @@ namespace ProyectoGuruData.Vista
         }
                 
 
-        private void dgwMisReservas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
-
-
+       
         //BUSCAMOS NIF DEL CLIENTE
         private String Nif(TextBox password)
         {

@@ -33,5 +33,28 @@ namespace ProyectoGuruData.Vista
 
 
         }
+
+        private void btnHacerReserva_Click(object sender, EventArgs e)
+        {
+            FormReservas formReservas = new FormReservas();
+            formReservas.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMostrarReservasTodas_Click(object sender, EventArgs e)
+        {
+            FormVerReservas formVerReservas = new FormVerReservas();
+            formVerReservas.Show();
+        }
+
+        private void btnMostrarReservasEspera_Click(object sender, EventArgs e)
+        {
+            FormVerReservasEspera formVerReservasEspera = new FormVerReservasEspera();
+            formVerReservasEspera.Show();
+        }
     }
 }

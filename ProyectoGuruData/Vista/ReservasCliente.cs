@@ -22,7 +22,7 @@ namespace ProyectoGuruData.Vista
 
 
 
-        public TextBox txtPasswordCliente = LogIn.instance.txtPasswordCliente;
+        public TextBox txtPasswordCliente = FormLogin.instance.txtPasswordCliente;
         public ReservasCliente()
         {
             InitializeComponent();

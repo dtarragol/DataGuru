@@ -51,7 +51,7 @@
             this.dgwMisReservas.RowTemplate.Height = 33;
             this.dgwMisReservas.Size = new System.Drawing.Size(1397, 540);
             this.dgwMisReservas.TabIndex = 0;
-            this.dgwMisReservas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwMisReservas_CellContentClick);
+            
             // 
             // estadoReserva
             // 

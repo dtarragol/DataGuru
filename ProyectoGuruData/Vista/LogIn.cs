@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace ProyectoGuruData.Vista
 {
-    public partial class LogIn : Form
+    public partial class FormLogin : Form
     {
-        public static LogIn instance;  // para acceder a sus datos desde otors forms
+        public static FormLogin instance;  // para acceder a sus datos desde otors forms
         public TextBox txtPasswordCliente;
-        public LogIn()
+        public FormLogin()
         {
             InitializeComponent();
             instance = this;      // para acceder a sus datos desde otors forms
@@ -60,6 +60,11 @@ namespace ProyectoGuruData.Vista
         private void LogIn_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
