@@ -33,5 +33,19 @@ namespace ProyectoGuruData.Vista
 
 
         }
+
+        private void btnMostrarReservasEspera_Click(object sender, EventArgs e)
+        {
+            //BOTON PARA VER RESERVAS PENDIENTES: ADMIN
+            FormVerReservasEspera formVerReservasEspera = new FormVerReservasEspera();
+            formVerReservasEspera.Show();
+        }
+
+        private void btnMostrarReservasTodas_Click(object sender, EventArgs e)
+        {
+            //BOTON PARA VER TODAS LAS RESERVAS: ADMIN
+            FormVerReservas formVerReservas = new FormVerReservas();
+            formVerReservas.Show();
+        }
     }
 }
