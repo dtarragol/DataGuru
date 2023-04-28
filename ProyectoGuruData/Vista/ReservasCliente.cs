@@ -30,15 +30,15 @@ namespace ProyectoGuruData.Vista
 
         private void ReservasCliente_Load(object sender, EventArgs e)
         {
-            loadGridAvtividades();            
+            loadGridAvtividades();
         }
 
 
         // Rellenar la tabla de Actividades con datos 
         void loadGridAvtividades()
-        {            
+        {
             gridActividades.AutoGenerateColumns = false;
-            DATAguruContext db = new DATAguruContext();            
+            DATAguruContext db = new DATAguruContext();
             gridActividades.DataSource = db.Actividades.ToList<Actividades>();
         }
 
@@ -52,19 +52,19 @@ namespace ProyectoGuruData.Vista
 
             if (gridActividades.Columns[e.ColumnIndex].Name == "Anular")
             {
-                
+
                 anularReserva(e);
-               
+
 
             }
-          
+
 
             //BOTON HACER RESERVA
             if (gridActividades.Columns[e.ColumnIndex].Name == "Reservar")
             {
                 reservarActividad(e);
             }
-          
+
 
 
         }
@@ -73,7 +73,7 @@ namespace ProyectoGuruData.Vista
         // FUNCION ANULAR RESERVA
         private void anularReserva(DataGridViewCellEventArgs e)
         {
-            
+
             DATAguruContext db = new DATAguruContext();
             String nifCliente = Nif(txtPasswordCliente);
             reservas = db.Reservas.Where(m => m.ClienteFk == nifCliente && m.ActividadFk == gridActividades.Rows[e.RowIndex].Cells["idActividad"].FormattedValue.ToString()).FirstOrDefault();
@@ -112,8 +112,10 @@ namespace ProyectoGuruData.Vista
             int cantidades = db.Reservas.Where(m => m.ActividadFk == idActividad).Count();
             int cantReservasahora = db.Reservas.Where(m => m.ClienteFk == nifCliente).Count();
 
-            var query = (from r in db.Reservas join a in db.Actividades on r.ActividadFk equals a.IdActividad where r.ClienteFk == nifCliente
-                               select a.diaSemana
+            var query = (from r in db.Reservas
+                         join a in db.Actividades on r.ActividadFk equals a.IdActividad
+                         where r.ClienteFk == nifCliente
+                         select a.diaSemana
                                );
             int vecesXsemana = query.Count();
 
@@ -121,7 +123,7 @@ namespace ProyectoGuruData.Vista
 
             if (cantidades >= 3)
             {
-                if(cantReservasahora < 2)
+                if (cantReservasahora < 2)
                 {
                     if (txtIdReserva.Text != "" && idExiste(txtIdReserva.Text) == false)
                     {
@@ -142,14 +144,14 @@ namespace ProyectoGuruData.Vista
                 {
                     MessageBox.Show("No se puede reservar mas de dos actividades al dia");
                 }
-               
-                            
-            
+
+
+
             }
             else
             {   // metemos la reserva en la bbdd
-                if(cantReservasahora < 2) 
-                {                   
+                if (cantReservasahora < 2)
+                {
                     if (txtIdReserva.Text != "" && idExiste(txtIdReserva.Text) == false)
                     {
                         hacerReserva.IdReserva = txtIdReserva.Text.Trim();
@@ -170,11 +172,11 @@ namespace ProyectoGuruData.Vista
                     }
 
                 }
-                else { MessageBox.Show("No se puede reservar mas de dos actividades al dia");  }
-                
-              
+                else { MessageBox.Show("No se puede reservar mas de dos actividades al dia"); }
+
+
             }
-            
+
 
         }
 
@@ -183,11 +185,11 @@ namespace ProyectoGuruData.Vista
         private String Nif(TextBox password)
         {
             DATAguruContext db = new DATAguruContext();
-            var nif = db.Clientes.Where(m => m.Password == password.Text.Trim()).FirstOrDefault();             
+            var nif = db.Clientes.Where(m => m.Password == password.Text.Trim()).FirstOrDefault();
             return nif.Nif;
         }
 
-   
+
 
         private void actualizarListaEspera(DataGridViewCellEventArgs e)
         {
@@ -202,9 +204,9 @@ namespace ProyectoGuruData.Vista
             {
                 int min = 100;
                 String convert;
-               
+
                 listaEspera = db.Reservas.Where(m => m.ActividadFk == idActividad && m.EstadoReserva == "ListaEspera").ToList();
-                foreach(var i in listaEspera)
+                foreach (var i in listaEspera)
                 {
                     if (min > Int32.Parse(i.IdReserva))
                     {
@@ -214,18 +216,18 @@ namespace ProyectoGuruData.Vista
                     convert = min.ToString();
                     cambiarEstado = db.Reservas.Where(m => m.IdReserva == convert).FirstOrDefault();
 
-                   // idMin = i.IdReserva.Min();
-                   // var pendiente = db.Reservas.Where(m => m.IdReserva == idMin.ToString());
-                   // cambiarEstado = db.Reservas.Where(m => m.IdReserva == pendiente.ToString()).FirstOrDefault();
+                    // idMin = i.IdReserva.Min();
+                    // var pendiente = db.Reservas.Where(m => m.IdReserva == idMin.ToString());
+                    // cambiarEstado = db.Reservas.Where(m => m.IdReserva == pendiente.ToString()).FirstOrDefault();
 
-                    if(cambiarEstado != null)
+                    if (cambiarEstado != null)
                     {
                         cambiarEstado.EstadoReserva = "Aceptada";
                         db.SaveChanges();
                     }
 
-                   
-                }                                
+
+                }
 
             }
 
@@ -233,20 +235,20 @@ namespace ProyectoGuruData.Vista
 
         public Boolean idExiste(String idReserva)
         {
-            bool existeBBDDD = false;            
+            bool existeBBDDD = false;
 
             DATAguruContext db = new DATAguruContext();
             var existe = db.Reservas.Where(m => m.IdReserva == idReserva).FirstOrDefault();
 
             if (existe != null)
             {
-                 existeBBDDD = true;
+                existeBBDDD = true;
             }
             return existeBBDDD;
         }
 
-     
-      
+
+
 
     }
 }

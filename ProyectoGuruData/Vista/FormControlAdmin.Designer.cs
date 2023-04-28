@@ -66,6 +66,7 @@
             this.btnHacerReserva.TabIndex = 2;
             this.btnHacerReserva.Text = "Hacer Reserva para un Cliente";
             this.btnHacerReserva.UseVisualStyleBackColor = true;
+            this.btnHacerReserva.Click += new System.EventHandler(this.btnHacerReserva_Click);
             // 
             // btnMostrarReservasTodas
             // 
