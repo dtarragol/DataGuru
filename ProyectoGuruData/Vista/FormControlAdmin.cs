@@ -51,8 +51,13 @@ namespace ProyectoGuruData.Vista
         private void btnHacerReserva_Click(object sender, EventArgs e)
         {
             
-            ReservasCliente reservasCliente = new ReservasCliente();
-            reservasCliente.Show();
+            FormReservas reservas= new FormReservas();
+            reservas.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

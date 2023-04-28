@@ -169,8 +169,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DATAguruDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DATAguruDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModeloBBDD\ListaEspera.cs" />
     <Compile Include="ModeloBBDD\ListaReservas.cs" />
+    <Compile Include="Vista\FormReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormReservas.designer.cs">
+      <DependentUpon>FormReservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FormVerReservas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +242,9 @@
     <Compile Include="ModeloBBDD\Reservas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vista\FormReservas.resx">
+      <DependentUpon>FormReservas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ReservasXcliente.resx">
       <DependentUpon>ReservasXcliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,8 +276,18 @@
     <EmbeddedResource Include="Vista\ReservasCliente.resx">
       <DependentUpon>ReservasCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DATAguruDataSet.xsc">
+      <DependentUpon>DATAguruDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATAguruDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DATAguruDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATAguruDataSet.xss">
+      <DependentUpon>DATAguruDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\ProyectoGuruData.ModeloBBDD.Actividades+TipoActividad.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -279,6 +303,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controlador\" />
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="imagenes\login1.png" />

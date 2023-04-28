@@ -33,6 +33,7 @@
             this.btnHacerReserva = new System.Windows.Forms.Button();
             this.btnMostrarReservasTodas = new System.Windows.Forms.Button();
             this.btnMostrarReservasEspera = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGestionClientes
@@ -90,12 +91,23 @@
             this.btnMostrarReservasEspera.UseVisualStyleBackColor = true;
             this.btnMostrarReservasEspera.Click += new System.EventHandler(this.btnMostrarReservasEspera_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(378, 353);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(144, 49);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // FormControlAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(935, 485);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnMostrarReservasEspera);
             this.Controls.Add(this.btnMostrarReservasTodas);
             this.Controls.Add(this.btnHacerReserva);
@@ -115,5 +127,6 @@
         private System.Windows.Forms.Button btnHacerReserva;
         private System.Windows.Forms.Button btnMostrarReservasTodas;
         private System.Windows.Forms.Button btnMostrarReservasEspera;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
