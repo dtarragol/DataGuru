@@ -176,6 +176,12 @@
     </Compile>
     <Compile Include="ModeloBBDD\ListaEspera.cs" />
     <Compile Include="ModeloBBDD\ListaReservas.cs" />
+    <Compile Include="Vista\FormOdoo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormOdoo.Designer.cs">
+      <DependentUpon>FormOdoo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FormReservas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     <Compile Include="ModeloBBDD\Reservas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vista\FormOdoo.resx">
+      <DependentUpon>FormOdoo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormReservas.resx">
       <DependentUpon>FormReservas.cs</DependentUpon>
     </EmbeddedResource>

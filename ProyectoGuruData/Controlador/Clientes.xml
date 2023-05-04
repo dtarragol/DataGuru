@@ -1,0 +1,11 @@
+<Clientes>
+  <Cliente NIF="X11111111S" Nombre="Marta" Teléfono="671381259" Mail="marta@gmail.com" Contraseña="martA" />
+  <Cliente NIF="X12345678S" Nombre="Administrador" Teléfono="661771881" Mail="admin@gmail.com" Contraseña="1234" />
+  <Cliente NIF="X2222222S" Nombre="Nicolas" Teléfono="651428591" Mail="nicolas@gmail.com" Contraseña="nicolas22" />
+  <Cliente NIF="X3333333S" Nombre="Marc" Teléfono="625815936" Mail="marc@gmail.com" Contraseña="marc11A" />
+  <Cliente NIF="X4444444S" Nombre="Laura" Teléfono="628827163" Mail="laura@gmail.com" Contraseña="laura97" />
+  <Cliente NIF="X5555555S" Nombre="Miquel" Teléfono="682827165" Mail="miquel@gmail.com" Contraseña="miquel221" />
+  <Cliente NIF="X6666666S" Nombre="Sara" Teléfono="652726815" Mail="sara@gmail.com" Contraseña="sar@12" />
+  <Cliente NIF="X777777S" Nombre="Lucas" Teléfono="682615952" Mail="lucas@gmail.com" Contraseña="lucas777" />
+  <Cliente NIF="X81828384S" Nombre="Jose" Teléfono="612781268" Mail="jose@gmail.com" Contraseña="jose@12" />
+</Clientes>
