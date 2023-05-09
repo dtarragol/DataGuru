@@ -39,9 +39,9 @@
             // 
             // btnGestionClientes
             // 
-            this.btnGestionClientes.Location = new System.Drawing.Point(284, 180);
+            this.btnGestionClientes.Location = new System.Drawing.Point(305, 187);
             this.btnGestionClientes.Name = "btnGestionClientes";
-            this.btnGestionClientes.Size = new System.Drawing.Size(346, 73);
+            this.btnGestionClientes.Size = new System.Drawing.Size(334, 73);
             this.btnGestionClientes.TabIndex = 0;
             this.btnGestionClientes.Text = "Añadir y Mostrar Clientes";
             this.btnGestionClientes.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@
             // 
             // btnHacerReserva
             // 
-            this.btnHacerReserva.Location = new System.Drawing.Point(284, 288);
+            this.btnHacerReserva.Location = new System.Drawing.Point(305, 289);
             this.btnHacerReserva.Name = "btnHacerReserva";
-            this.btnHacerReserva.Size = new System.Drawing.Size(346, 78);
+            this.btnHacerReserva.Size = new System.Drawing.Size(334, 78);
             this.btnHacerReserva.TabIndex = 2;
             this.btnHacerReserva.Text = "Hacer Reserva para un Cliente";
             this.btnHacerReserva.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
             // 
             this.btnMostrarReservasTodas.Location = new System.Drawing.Point(716, 289);
             this.btnMostrarReservasTodas.Name = "btnMostrarReservasTodas";
-            this.btnMostrarReservasTodas.Size = new System.Drawing.Size(346, 77);
+            this.btnMostrarReservasTodas.Size = new System.Drawing.Size(346, 78);
             this.btnMostrarReservasTodas.TabIndex = 3;
             this.btnMostrarReservasTodas.Text = "Mostrar Todas las Reservas";
             this.btnMostrarReservasTodas.UseVisualStyleBackColor = true;
@@ -79,9 +79,9 @@
             // 
             // btnMostrarReservasEspera
             // 
-            this.btnMostrarReservasEspera.Location = new System.Drawing.Point(284, 426);
+            this.btnMostrarReservasEspera.Location = new System.Drawing.Point(305, 397);
             this.btnMostrarReservasEspera.Name = "btnMostrarReservasEspera";
-            this.btnMostrarReservasEspera.Size = new System.Drawing.Size(334, 77);
+            this.btnMostrarReservasEspera.Size = new System.Drawing.Size(334, 88);
             this.btnMostrarReservasEspera.TabIndex = 4;
             this.btnMostrarReservasEspera.Text = "Mostrar Reservas en el Estado Espera";
             this.btnMostrarReservasEspera.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(556, 572);
+            this.btnSalir.Location = new System.Drawing.Point(576, 531);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(216, 77);
@@ -100,9 +100,9 @@
             // 
             // btnOdoo
             // 
-            this.btnOdoo.Location = new System.Drawing.Point(716, 426);
+            this.btnOdoo.Location = new System.Drawing.Point(716, 397);
             this.btnOdoo.Name = "btnOdoo";
-            this.btnOdoo.Size = new System.Drawing.Size(345, 77);
+            this.btnOdoo.Size = new System.Drawing.Size(346, 87);
             this.btnOdoo.TabIndex = 7;
             this.btnOdoo.Text = "Cargar datos a Odoo";
             this.btnOdoo.UseVisualStyleBackColor = true;

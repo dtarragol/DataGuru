@@ -17,7 +17,7 @@ namespace ProyectoGuruData
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormOdoo());
+            Application.Run(new LogIn());
         }
     }
 }
