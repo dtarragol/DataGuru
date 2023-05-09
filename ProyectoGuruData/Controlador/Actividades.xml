@@ -1,0 +1,5 @@
+<Actividades>
+  <Actividad Id="a1" Tipo="Zumba" Hora="PT9H" DiaSemana="Lunes" Plazas="16" />
+  <Actividad Id="a2" Tipo="Pilates" Hora="PT9H45M" DiaSemana="Lunes" Plazas="16" />
+  <Actividad Id="a3" Tipo="BodyPump" Hora="PT10H15M" DiaSemana="Lunes" Plazas="16" />
+</Actividades>

@@ -59,5 +59,11 @@ namespace ProyectoGuruData.Vista
         {
             this.Close();
         }
+
+        private void btnOdoo_Click(object sender, EventArgs e)
+        {
+            FormOdoo odoo = new FormOdoo();
+            odoo.Show();
+        }
     }
 }
