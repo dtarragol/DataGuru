@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Actividades>
   <Actividad Id="a1" Tipo="Zumba" Hora="PT9H" DiaSemana="Lunes" Plazas="16" />
   <Actividad Id="a2" Tipo="Pilates" Hora="PT9H45M" DiaSemana="Lunes" Plazas="16" />

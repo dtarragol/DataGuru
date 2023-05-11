@@ -1,10 +1,10 @@
 import xml.etree.ElementTree as ET
 import xmlrpc.client
 
-url = 'http://localhost:8069'
+url = 'https://dataguru.odoo.com'
 DB='dataguru'
 USER='khlazovska@uoc.edu'
-PASS='password'
+PASS='Adminpass'
 
 common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url))
 common.version()
@@ -16,13 +16,14 @@ uid = common.authenticate(DB, USER, PASS, {})
 if uid:
     archivo_xml = ET.parse('C:/Users/kater/OneDrive/Documentos/NET_PROD4/DataGuru/ProyectoGuruData/Controlador/Clientes.xml')
     xml = archivo_xml.getroot()
-    for i in xml:
-        do_write = models.execute(DB,uid,PASS,'x_clientes','create',[{
-            'x_studio_x_nif': i[0].text,
-            'x_studio_x_nombre': i[1].text,
-            'x_studio_x_telfono': i[2].text,
-            'x_studio_x_mail': i[3].text,
-            'x_studio_x_contrasena': i[4].text,
+    for i in xml.findall('Cliente'):
+        #print(i.get('NIF'))
+        do_write = models.execute_kw(DB,uid,PASS,'x_clientes','create',[{
+            'x_studio_x_nif': i.get('NIF'),
+            'x_studio_x_nombre': i.get('Nombre'),
+            'x_studio_x_telfono': i.get('Teléfono'),
+            'x_studio_x_mail': i.get('Mail'),
+            'x_studio_x_contrasena': i.get('Contraseña'),
             }])
     print('Los clientes se han cargado correctamente')
 else:

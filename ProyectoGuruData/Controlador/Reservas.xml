@@ -1,4 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Reservas>
-  <Reservas Id="1" ReservaxCliente="2" FechayHora="2023-05-08T22:57:05.233" Estado="Aceptada" Cliente="X11111111S" Actividad="a1" />
-  <Reservas Id="2" ReservaxCliente="2" FechayHora="2023-05-08T22:57:12.537" Estado="Aceptada" Cliente="X11111111S" Actividad="a2" />
+  <Reserva Id="1" ReservaxCliente="2" FechayHora="2023-05-08T22:57:05.233" Estado="Aceptada" Cliente="X11111111S" Actividad="a1" />
+  <Reserva Id="2" ReservaxCliente="2" FechayHora="2023-05-08T22:57:12.537" Estado="Aceptada" Cliente="X11111111S" Actividad="a2" />
 </Reservas>

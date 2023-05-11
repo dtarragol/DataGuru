@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Clientes>
   <Cliente NIF="X11111111S" Nombre="Marta" Teléfono="671381259" Mail="marta@gmail.com" Contraseña="martA" />
   <Cliente NIF="X12345678S" Nombre="Administrador" Teléfono="661771881" Mail="admin@gmail.com" Contraseña="1234" />

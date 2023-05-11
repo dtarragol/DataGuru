@@ -27,27 +27,24 @@ namespace ProyectoGuruData.Vista
 
             DATAguruContext db = new DATAguruContext();
             XElement xml = new XElement("Clientes",
-                               (from columna in db.Clientes
-                                select new
-                                {
-                                    columna.Nif,
-                                    columna.Nombre,
-                                    columna.Telefono,
-                                    columna.Mail,
-                                    columna.Password
-                                }).ToList().Select(
-                                           x => new XElement("Cliente",
-                                                new XAttribute("NIF", x.Nif),
-                                                new XAttribute("Nombre", x.Nombre),
-                                                new XAttribute("Teléfono", x.Telefono),
-                                                new XAttribute("Mail", x.Mail),
-                                                new XAttribute("Contraseña", x.Password)
-                                           )));
+                (from columna in db.Clientes
+                 select new
+                 {
+                     columna.Nif,
+                     columna.Nombre,
+                     columna.Telefono,
+                     columna.Mail,
+                     columna.Password
+                 }).ToList().Select(x => new XElement("Cliente",
+                                         new XAttribute("NIF", x.Nif),
+                                         new XAttribute("Nombre", x.Nombre),
+                                         new XAttribute("Teléfono", x.Telefono),
+                                         new XAttribute("Mail", x.Mail),
+                                         new XAttribute("Contraseña", x.Password)
+                                         )));
 
-            FileStream xmlFile = File.OpenWrite(@"C:\Users\kater\OneDrive\Documentos\NET_PROD4\DataGuru\ProyectoGuruData\Controlador\\Clientes.xml");
-            byte[] xmlBytes = Encoding.UTF8.GetBytes(xml.ToString());
-            xmlFile.Write(xmlBytes, 0, xmlBytes.Length);
-            xmlFile.Close();
+           
+            xml.Save(@"C:\Users\kater\OneDrive\Documentos\NET_PROD4\DataGuru\ProyectoGuruData\Controlador\\Clientes.xml");
 
             // pasamos el xml al programa python
             var script = @"C:\Users\kater\OneDrive\Documentos\NET_PROD4\DataGuru\ProyectoGuruData\Controlador\OdooClientes.py";        // ESCIRBIR LA DIRECCIÓN DEL PY
@@ -73,7 +70,7 @@ namespace ProyectoGuruData.Vista
             }
             process.WaitForExit();
 
-            MessageBox.Show("Se han cargado los datos a Odoo");
+           // MessageBox.Show("Se han cargado los datos a Odoo");
 
         }
 
@@ -105,10 +102,8 @@ namespace ProyectoGuruData.Vista
                                                 new XAttribute("Plazas", x.Plazas)
                                            )));
 
-            FileStream xmlFile = File.OpenWrite(@"C:\Users\kater\OneDrive\Documentos\NET_PROD4\DataGuru\ProyectoGuruData\Controlador\\Actividades.xml");
-            byte[] xmlBytes = Encoding.UTF8.GetBytes(xml.ToString());
-            xmlFile.Write(xmlBytes, 0, xmlBytes.Length);
-            xmlFile.Close();
+
+            xml.Save(@"C:\Users\kater\OneDrive\Documentos\NET_PROD4\DataGuru\ProyectoGuruData\Controlador\\Actividades.xml");
 
             // pasamos el xml al programa python
             var script = @"C:\Users\kater\OneDrive\Documentos\NET_PROD4\DataGuru\ProyectoGuruData\Controlador\OdooActividades.py";        // ESCIRBIR LA DIRECCIÓN DEL PY      
@@ -134,7 +129,7 @@ namespace ProyectoGuruData.Vista
             }
             process.WaitForExit();
 
-            MessageBox.Show("Se han cargado los datos a Odoo");
+           // MessageBox.Show("Se han cargado los datos a Odoo");
         }
 
         private void btnReservasOdoo_Click(object sender, EventArgs e)
@@ -153,7 +148,7 @@ namespace ProyectoGuruData.Vista
                                     columna.ClienteFk,
                                     columna.ActividadFk
                                 }).ToList().Select(
-                                           x => new XElement("Reservas",
+                                           x => new XElement("Reserva",
                                                 new XAttribute("Id", x.IdReserva),
                                                 new XAttribute("ReservaxCliente", x.ReservaXcliente),
                                                 new XAttribute("FechayHora", x.FechaHoraReserva),
@@ -162,10 +157,8 @@ namespace ProyectoGuruData.Vista
                                                 new XAttribute("Actividad", x.ActividadFk)
                                            )));
 
-            FileStream xmlFile = File.OpenWrite(@"C:\Users\kater\OneDrive\Documentos\NET_PROD4\DataGuru\ProyectoGuruData\Controlador\\Reservas.xml");
-            byte[] xmlBytes = Encoding.UTF8.GetBytes(xml.ToString());
-            xmlFile.Write(xmlBytes, 0, xmlBytes.Length);
-            xmlFile.Close();
+            
+            xml.Save(@"C:\Users\kater\OneDrive\Documentos\NET_PROD4\DataGuru\ProyectoGuruData\Controlador\\Reservas.xml");
 
             // pasamos el xml al programa python
             var script = @"C:\Users\kater\OneDrive\Documentos\NET_PROD4\DataGuru\ProyectoGuruData\Controlador\OdooReservas.py";        // ESCIRBIR LA DIRECCIÓN DEL PY        
@@ -190,7 +183,7 @@ namespace ProyectoGuruData.Vista
             }
             process.WaitForExit();
 
-            MessageBox.Show("Se han cargado los datos a Odoo");
+            //MessageBox.Show("Se han cargado los datos a Odoo");
         }
     }
 }
