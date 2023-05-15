@@ -17,7 +17,6 @@ if uid:
     archivo_xml = ET.parse('C:/Users/kater/OneDrive/Documentos/NET_PROD4/DataGuru/ProyectoGuruData/Controlador/Clientes.xml')
     xml = archivo_xml.getroot()
     for i in xml.findall('Cliente'):
-        #print(i.get('NIF'))
         do_write = models.execute_kw(DB,uid,PASS,'x_clientes','create',[{
             'x_studio_x_nif': i.get('NIF'),
             'x_studio_x_nombre': i.get('Nombre'),
